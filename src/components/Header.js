@@ -2,7 +2,7 @@ const Header = ({title}) => {
   return (
     <>
         <header>
-            <h1 style={{color: 'red'}}>{title}</h1>
+            <h1 style={h1Styles}>{title}</h1>
         </header>
     </>
   )
@@ -10,6 +10,10 @@ const Header = ({title}) => {
 
 Header.defaultProps = {
   title: 'Task Tracker'
+}
+
+const h1Styles = {
+  color: 'red'
 }
 
 export default Header
