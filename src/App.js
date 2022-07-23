@@ -27,16 +27,19 @@ const App = () => {
     
   ])
 
-  const deleteTask = (id) => {
-    console.log('deleted task', id);
-
+  const deleteTask = (id) => { 
     setTasks(tasks.filter((task) => task.id !== id))
+  }
+
+  const toggleStyle = (id) => {
+    console.log('deleted task', id);
   }
 
   return (
     <div className="container">
       <Header />
-      { tasks.length > 0 ? (<Task tasks={tasks} onDelete={deleteTask} />) 
+      { tasks.length > 0 ? 
+        (<Task tasks={tasks} onDelete={deleteTask} onToggle={toggleStyle} />) 
         : ('no tasks to show')  
       }
     </div>
